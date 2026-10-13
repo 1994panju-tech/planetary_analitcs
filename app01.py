@@ -35,11 +35,13 @@ st.markdown(
 # ------------------------------------------------------------------------------
 @st.cache_resource
 def load_models():
-    clf_path = "saved_models/best_case1_pha_classifier.joblib"
-    reg_path = "saved_models/best_case2_diameter_regressor.joblib"
+    #clf_path = "saved_models/best_case1_pha_classifier.joblib"
+    #reg_path = "saved_models/best_case2_diameter_regressor.joblib"
 
-    clf = joblib.load(clf_path) if os.path.exists(clf_path) else None
-    reg = joblib.load(reg_path) if os.path.exists(reg_path) else None
+    #clf = joblib.load(clf_path) if os.path.exists(clf_path) else None
+    #reg = joblib.load(reg_path) if os.path.exists(reg_path) else None
+    clf = "best_case1_pha_classifier.joblib"
+    reg = "best_case2_diameter_regressor.joblib"
     return clf, reg
 
 model_clf, model_reg = load_models()
